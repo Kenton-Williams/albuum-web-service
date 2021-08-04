@@ -25,7 +25,7 @@ function loadAJAX(cat)
 	$.ajax({
 		type:"GET",
 		dataType: "json",
-		url : "api.php?cat=" + cat;
+		url : "api.php?cat=" + cat,
 		success: bondJSON
 	});
 }
@@ -37,7 +37,9 @@ function toConsole(data)
 
 function bondJSON(data){
 //JSON processing data goes here
-	console.log(data)
+	console.log(data);
+
+	$("#output").text(JSON.stringify(data));
 }
 
 </script>
