@@ -102,7 +102,7 @@ function bondJSON(data){
 
 
 
-			<div class="pic"><img src="tumbnails/dr-no.jpg"/></div>
+			<div class="pic"><img src="thumbnails/dr-no.jpg"/></div>
 			</div>
 
 
