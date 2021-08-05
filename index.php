@@ -3,10 +3,41 @@
 <title>Bond Web Service Demo</title>
 <style>
 body {font-family:georgia;}
+
+.film{
+	border:1px solid #E77DC2;
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom:5px;
+	position:relative;	
+}
+
+.pic{
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
 </style>
 <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 
 <script type="text/javascript">
+
+function serverSetup(server,cat){
+  server = server.toLowerCase();
+  let url = "";
+  if(server == "php"){//use web service
+      url = "api.php?cat=" + cat;
+  }else{//server is HTML only - simulate web service
+      if(cat == "box"){//box office
+          url = "data/bond-box-office.js";
+      }else{//year
+          url = "data/bond-year.js";
+      }
+  }
+  return url;
+}
+
 $(document).ready(function() {  
 
 	$('.category').click(function(e){
@@ -15,6 +46,8 @@ $(document).ready(function() {
 		loadAJAX(cat);  //load AJAX and parse JSON file
 	});
 });	
+
+let url = serverSetup("html",cat);
 
 
 function loadAJAX(cat)
