@@ -119,7 +119,7 @@ function bondTemplate(album){
 		<a href="year" class="category">Albums By Year</a><br />
 		<a href="genre" class="category">Albums By Genre</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
-		<div id="films">
+		<div class="films">
 			<!--
 			<div class="flim">
 			<b>Film</b>:1<br />
