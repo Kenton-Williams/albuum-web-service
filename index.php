@@ -47,7 +47,7 @@ $(document).ready(function() {
 	});
 });	
 
-let url = serverSetup("html",cat);
+//let url = serverSetup("html",cat);
 
 
 function loadAJAX(cat)
