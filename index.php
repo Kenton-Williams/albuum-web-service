@@ -83,7 +83,7 @@ function bondJSON(data){
 	$('#filmtitle').html(data.title);
 
 	$('#films').html('');
-
+/*
 	$each(data.film,function(i,item){
 		let str = bondTemplate(item);
 
@@ -91,25 +91,21 @@ function bondJSON(data){
 		
 		
 	})
-
+*/
 
 
 }
 
-function bondTemplate(){
-	return ` 
-				<b>Film:</b>${film.Film}<br />
-				<b>Title:</b>${film.Title}<br/>
-				<b>Year:</b>${film.Year}<br />
-				<b>Director:</b>${film.Director}<br/>
-				<b>Producers:</b>${film.Producers}<br />
-				<b>Writers:</b>${film.Writers}<br />
-				<b>Composer:</b>${film.Composer}<br />
-				<b>Bond:</b>${film.Bond}<br />
-				<b>Budget:</b>${film.Budget}<br />
-				<b>Box Office:</b>${film.BoxOffice}<br />
-				<b>Image:</b>${film.Image}<br />
-	
+function bondTemplate(album){
+	return `
+			<div class="film">
+				<b>Year:</b>${album.Year}<br />
+				<b>Artist:</b>${album.Artist}<br/>
+				<b>Title:</b>${album.Title}<br />
+				<b>Sales:</b>${album.Sales}<br/>
+				<b>Grenre:</b>${album.Genre}<br />
+				<b>Image:</b>${album.Image}<br />
+			</div>
 	
 	`;
 
